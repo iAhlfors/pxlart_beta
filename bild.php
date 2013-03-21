@@ -6,13 +6,12 @@
 ?>
 	<div id="canvas">
 		<?php
-
 			$query = mysql_query("SELECT * FROM skrap WHERE id='$id'");
 
 			$row = mysql_fetch_array($query);
 			
 				if (!$row) {
-    				header('Location: index.php');
+    				header('Location: http://ahlforsfrilans.se/pxl_arta_login/index.php');
     				die();
 				} else {
 					echo $row['art'];
@@ -26,15 +25,19 @@
 
 	<div id="meta">
 		<div class="metaL">
-			<p>Artist:<br />PXL-namn:<br />Skapad:</p>
+			<p>Artist:<br />PXL-namn:<br />Skapad:<br/>Dela:</p>
 		</div>
 		<div class="metaR">
 			<p><strong>
-				<?php echo $artist;
+				<?php
+				$currentUrl = "http://ahlforsfrilans.se/pxl_arta_login/pxl/".$id;
+				echo '<a href="visa.php?artist='. $artist .'">'. $artist .'</a>';
 				echo '<br />';
 				echo $artName;
 				echo '<br />';
 				echo $time;
+				echo '<br />';
+				echo '<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=' . $currentUrl . '">Dela på Facebook</a>';
 				?>
 			<strong></p>
 		</div>

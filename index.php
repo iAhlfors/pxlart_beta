@@ -11,9 +11,9 @@
 	{
 	    $username = $sql->real_escape_string($_POST['username']);
 
-	    $query = "SELECT id, password, UNIX_TIMESTAMP(created) AS salt
-	              FROM pxlart_usrz
-	              WHERE username = '{$username}'";
+	    $query = "SELECT ***, UNIX_TIMESTAMP(created) AS salt
+	              FROM ***
+	              WHERE *** = '{$***}'";
 	    $user = $sql->query($query)->fetch_object();
 	    if ($user && $user->password == $hasher->CheckPassword($_POST['password'], $user->password))
 	    {
@@ -48,7 +48,7 @@
 							<h1>Vad är en PXL?</h1>
 							En PXL är en liten kvadrat, 10x10 pixlar stor. På PXLART får du hela 2700 små PXLar till ditt förfogande.
 							<h1>Vad är PXLART?</h1>
-							PXLART är ett open source-projekt.
+							PXLART är ett open source-projekt. Kolla gärna vad <a href="http://ahlforsfrilans.se/pxl_arta_login/visa.php?artist=demo">demo</a> har ritat!
 						</div>
 						<div class="loginreg">
 							<h1>Logga in</h1>
@@ -114,11 +114,9 @@
 		Hej,
 		<br />
 		Vad vill du kalla din konst för? <br />
-			<form class="form" method="">
 	    		<p class="epost">
-	    			<input type="text" value="PXL-namn" name="epost" id="pxlNamn" onfocus="if (this.value=='PXL-namn') this.value='';" onblur="if(this.value == ''){this.value='PXL-namn';}" /><br />
+	    			<input type="text" value="PXL-namn" name="pxlNamn" id="pxlNamn" onfocus="if (this.value=='PXL-namn') this.value='';" onblur="if(this.value == ''){this.value='PXL-namn';}" /><br />
 	    		</p>
-	    	</form>
 	    		<br />
 		<a class="loading_save" href="#" onclick="onClick()">Spara bild</a>
 		<div id="loading" style="display:none">

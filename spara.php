@@ -6,7 +6,7 @@
 	$name = mysql_real_escape_string($_POST['name']);
 	$artName = mysql_real_escape_string($_POST['pxlName']);
 	if ($_POST['contents'] != "") {
-		$insertInto = mysql_query("INSERT INTO skrap VALUES ('', '". $name ."', '". $div ."', '" . $artName . "', NOW())");
+		$insertInto = mysql_query("INSERT INTO * VALUES ('', '". $name ."', '". $div ."', '" . $artName . "', NOW())");
 	}
 	$q = mysql_query("SELECT * FROM skrap ORDER BY id DESC LIMIT 1");
 		while ($row = mysql_fetch_array($q))

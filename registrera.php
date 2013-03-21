@@ -29,7 +29,7 @@ if (!empty($_POST))
     // First check that required fields have been filled in.
     if (empty($_POST['username']))
     {
-        $errors['username'] = "Username cannot be empty.";
+        $errors['username'] = "Fyll i användarnamnet!";
     }
 
     // OPTIONAL
@@ -43,7 +43,7 @@ if (!empty($_POST))
 
     if (empty($_POST['password']))
     {
-        $errors['password'] = "Password cannot be empty.";
+        $errors['password'] = "Fyll i lösenordet!";
     }
 
     /**
@@ -51,7 +51,7 @@ if (!empty($_POST))
      */
     if (strlen($_POST['password']) < 8)
     {
-        $errors['password'] = "Password must be at least 8 charcaters.";
+        $errors['password'] = "Lösenordet skall innehålla minst åtta tecken.";
     }
 
     // OPTIONAL
@@ -69,18 +69,18 @@ if (!empty($_POST))
 
     if (empty($_POST['password_confirm']))
     {
-        $errors['password_confirm'] = "Please confirm password.";
+        $errors['password_confirm'] = "Var vänlig upprepa lösenordet.";
     }
 
     if ($_POST['password'] != $_POST['password_confirm'])
     {
-        $errors['password'] = "Passwords do not match.";
+        $errors['password'] = "Lösenorden matchar inte.";
     }
 
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     if (!$email)
     {
-        $errors['email'] = "Not a valid email address.";
+        $errors['email'] = "Kontrollera epost-adressen.";
     }
 
     /**
@@ -110,11 +110,11 @@ if (!empty($_POST))
     {
         if ($existing->username == $_POST['username'])
         {
-            $errors['username'] = "That username is already in use.";
+            $errors['username'] = "Användarnamnet är upptaget.";
         }
         if ($existing->email == $email)
         {
-            $errors['email'] = "That email address is already in use.";
+            $errors['email'] = "E-postadressen används redan.";
         }
     }
 }
@@ -137,11 +137,11 @@ if (!empty($_POST) && empty($errors))
 
     if ($success)
     {
-        $message = "Account created.";
+        $message = "Kontot skapdes utan problem!";
     }
     else
     {
-        $errors['registration'] = "Account could not be created. Please try again later.";
+        $errors['registration'] = "Kontot kunde inte skapas!";
     }
 }
 
@@ -161,34 +161,34 @@ if (!empty($_POST) && empty($errors))
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" style="padding:0px 15px 0px 0px;">
                             <label for="username">Användarnamn: </label>
                             <input type="text" id="username" name="username" value="<?php if (isset($errors)) { echo $_POST['username']; } ?>" />
-                            <span class="error">
-                                <?php echo isset($errors['username']) ? $errors['username'] : ''; ?>
-                            </span><br />
 
                             <label for="email">E-post: </label>
                             <input type="text" id="email" name="email" value="<?php if (isset($errors)) { echo $_POST['email']; } ?>"/>
-                            <span class="error">
-                                <?php echo isset($errors['email']) ? $errors['email'] : ''; ?>
-                            </span><br />
 
                             <label for="password">Lösenord: </label>
                             <input type="password" id="password" name="password" />
-                            <span class="error">
-                                <?php echo isset($errors['password']) ? $errors['password'] : ''; ?>
-                            </span><br />
 
                             <label for="password_confirm">Lösenord igen: </label>
                             <input type="password" id="password_confirm" name="password_confirm" />
-                            <span class="error">
-                                <?php echo isset($errors['password_confirm']) ? $errors['password_confirm'] : ''; ?>
-                            </span><br />
-
+                            
                             <input type="submit" value="Registrera!" />
                     </form>
                 </div>
                 <div class="loginreg">
                     <h1>Det finstilta</h1>
                     <p>Använd sunt förnuft, denna tjänst är öppen för alla.<br /><br />Ditt konto kan raderas när som helst.</p>
+                     <span class="error">
+                        <?php echo isset($errors['username']) ? $errors['username'] : ''; ?>
+                    </span><br />
+                     <span class="error">
+                        <?php echo isset($errors['email']) ? $errors['email'] : ''; ?>
+                    </span><br />
+                    <span class="error">
+                        <?php echo isset($errors['password']) ? $errors['password'] : ''; ?>
+                    </span><br />
+                    <span class="error">
+                        <?php echo isset($errors['password_confirm']) ? $errors['password_confirm'] : ''; ?>
+                    </span><br />
                 </div>
             </div>
         </div>
