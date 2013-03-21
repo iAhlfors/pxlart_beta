@@ -1,0 +1,270 @@
+body {
+	background-image:url('bakgrund.jpg');
+	background-repeat:repeat-x;
+	background-position:center top;
+	font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0; 
+	float:right;
+}
+
+li {
+	display:inline-block;
+	margin-left:10px;
+}
+
+#canvas {
+	background:#FFF;
+	width:600px;
+	margin:50px auto 40px;
+
+	-moz-box-shadow: 0px 0px 20px #000;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+.box {
+	width:10px;
+	height:10px;
+	float:left;
+}
+
+.clear {
+	clear:both;
+}
+
+.info {
+	background:#2981e4;
+	width: 50px;
+	height:50px; 
+    -webkit-border-radius: 25px; -moz-border-radius: 25px;
+    font-size:36px;
+    color:#FFF;
+    font-weight:700;
+    text-align:center;
+
+    -moz-box-shadow: 0px 0px 7px #000;
+	-webkit-box-shadow: 0px 0px 7px #000;
+	box-shadow: 0px 0px 7px #000;
+
+	cursor:pointer;
+
+	float:right;
+}
+
+.info:hover {
+	background-color: #2575cf; 
+}
+
+.button, .button:visited {
+	width:300px;
+	margin:0px auto;
+	position:static;
+	background:#2981e4;
+	padding: 8px 14px 9px; 
+	color:#fff;
+	text-decoration:none;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+
+	-moz-box-shadow: 0px 0px 7px #000;
+	-webkit-box-shadow: 0px 0px 7px #000;
+	box-shadow: 0px 0px 7px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	cursor:pointer;
+	font-size:34px; 
+	font-weight:300;
+	text-align:center;
+}
+
+.button:hover { 
+	background-color: #2575cf; 
+}
+
+#logo {
+	width:700px;
+	max-height:80px;
+	margin:0px auto;
+	position:static;
+	font-size:62px;
+	font-weight:300;
+	color:#FFF;
+	text-align:center;
+}
+
+#logo a {
+	text-decoration:none;
+}
+
+#footer {
+	width:600px;
+	margin:40px auto;
+	position:static;
+	font-size:16px;
+	color:#FFF;
+	text-align:center;
+}
+
+input, textarea{
+	padding:9px;
+	border:solid 1px #CCC;
+	outline:0;
+	font:normal 13px/100% 'Open sans', sans-serif;
+	width:150px;
+	background:#FFF;
+	background: -moz-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -mox-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	resize:none;
+}
+
+textarea {
+	resize:none;
+	line-height:150%;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus{
+	border-color:#C9C9C9;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+}
+
+label {
+	float:left;
+ 	width:195px;
+  	margin-right:10px;
+  	padding-top:10px;
+  	text-align:right;
+  	font-weight:500;
+}
+
+#artistInfo {
+	width:600px;
+	margin:0px auto;
+	color:#FFF;
+}
+
+#topMenu {
+	width:100%;
+	height:40px;
+}
+
+#innerMenu {
+	width:800px;
+	margin:0px auto;
+	background:#333;
+}
+
+#loggaIn, #registrera {
+	min-width:600px; 
+	width:auto !important; 
+	width:600px;
+
+	min-height:450px;
+	height:auto !important;
+	height:450px;
+}
+
+#registrera h1 {
+	font-size:28px;
+	font-weight:300;
+}
+
+.medlemsInfo {
+	width:370px;
+	float:left;
+	padding-left: 25px;
+}
+
+.medlemsInfo h1 {
+	font-size:28px;
+	font-weight:400;
+}
+
+.medlemsinfo a {
+	font-weight:600;
+	text-decoration:none;
+	color:#000;
+}
+
+.loginreg {
+	width:175px;
+	padding-left:25px;
+	float:right;
+	background:#2981e4;
+	height:450px;
+}
+
+.loginreg h1 {
+	font-size:28px;
+	font-weight:300;
+	color:#FFF;
+}
+
+.loginreg p {
+	padding: 0px 15px 0px 0px;
+	color:#FFF;
+	font-size:15px;
+}
+
+span {
+	font-size:12px;
+	color:#A80000;
+}
+
+#meta {
+	width:600px;
+	height:141px;
+
+	margin:0px auto;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 0px 0px 10px #000;
+	-webkit-box-shadow: 0px 0px 10px #000;
+	box-shadow: 0px 0px 10px #000;
+	margin:0px auto;
+
+	background:#FFF;
+}
+
+.metaL {
+	background:#2981e4;
+	float:left;
+	width:130px;
+	-moz-border-radius: 6px 0px 0px 6px;
+	-webkit-border-radius: 6px 0px 0px 6px;
+	padding:10px;
+}
+
+.metaL p {
+	text-align:right;
+	width:120px;
+	font-weight:500;
+	font-size:20px;
+	color:#FFF;
+}
+
+.metaR {
+	float:right;
+	width:400px;
+	padding:10px;
+}
+
+.metaR p {
+	text-align:left;
+	width:320px;
+	font-weight:500;
+	font-size:20px;
+}
